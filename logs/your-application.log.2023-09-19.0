@@ -1,0 +1,409 @@
+2023-09-19 04:03:30 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17.0.8.1 on kamateraubuntu with PID 449749 (/root/demo/build/classes/java/main started by root in /root/demo)
+2023-09-19 04:03:30 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-19 04:03:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-19 04:03:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-09-19 04:03:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-09-19 04:03:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:03:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-19 04:03:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-19 04:03:32 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-19 04:03:32 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1598 ms
+2023-09-19 04:03:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-19 04:03:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-19 04:03:32 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-19 04:03:32 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-19 04:03:32 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-19 04:03:33 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-09-19 04:03:33 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-19 04:03:33 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 04:03:33 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-19 04:03:33 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:03:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-19 04:03:33 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.75 seconds (JVM running for 4.174)
+2023-09-19 04:03:33 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:03:43 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:03:53 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:04:03 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:04:13 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:04:23 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:04:33 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:04:43 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:04:53 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:05:03 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:05:13 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:100)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:514)
+	at com.example.demo.service.ApiService.sendDataFromDB(ApiService.java:85)
+	at com.example.demo.service.ApiService.sendDataFromDBPeriodically(ApiService.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-19 04:05:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 04:05:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-19 04:05:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-19 04:05:38 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17.0.8.1 on kamateraubuntu with PID 451744 (/root/demo/build/classes/java/main started by root in /root/demo)
+2023-09-19 04:05:38 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-19 04:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-19 04:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-09-19 04:05:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-09-19 04:05:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:05:39 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-19 04:05:39 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-19 04:05:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-19 04:05:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1134 ms
+2023-09-19 04:05:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-19 04:05:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-19 04:05:40 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-19 04:05:40 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-19 04:05:40 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-19 04:05:40 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-09-19 04:05:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-19 04:05:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 04:05:41 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-19 04:05:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:05:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-19 04:05:41 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.373 seconds (JVM running for 3.712)
+2023-09-19 04:05:41 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@476bcd82
+2023-09-19 04:05:51 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@726cf90a
+2023-09-19 04:06:01 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@6752c850
+2023-09-19 04:06:11 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@79105c1f
+2023-09-19 04:06:21 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@7c6ae95e
+2023-09-19 04:06:31 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@6b261a65
+2023-09-19 04:06:41 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@10f12dd6
+2023-09-19 04:06:51 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@316eba18
+2023-09-19 04:07:01 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@137e11e8
+2023-09-19 04:07:11 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@496f3b63
+2023-09-19 04:07:21 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@22bb256a
+2023-09-19 04:07:31 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@415cad74
+2023-09-19 04:07:41 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@377c3209
+2023-09-19 04:07:51 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@23a7aa3a
+2023-09-19 04:08:01 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@78c3ff1
+2023-09-19 04:08:11 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@382cde36
+2023-09-19 04:08:21 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@3d88040f
+2023-09-19 04:08:31 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@373b9906
+2023-09-19 04:08:41 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@595faffb
+2023-09-19 04:08:51 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: com.example.demo.model.BrandInfo@54c4e351
+2023-09-19 04:08:59 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 04:08:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-19 04:08:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-19 04:09:02 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17.0.8.1 on kamateraubuntu with PID 454987 (/root/demo/build/classes/java/main started by root in /root/demo)
+2023-09-19 04:09:02 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-19 04:09:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-19 04:09:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-09-19 04:09:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-09-19 04:09:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:09:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-19 04:09:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-19 04:09:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-19 04:09:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1104 ms
+2023-09-19 04:09:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-19 04:09:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-19 04:09:04 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-19 04:09:04 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-19 04:09:04 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-19 04:09:04 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-09-19 04:09:04 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-19 04:09:04 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 04:09:05 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-19 04:09:05 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:09:05 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-19 04:09:05 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.205 seconds (JVM running for 3.484)
+2023-09-19 04:09:05 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:09:15 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:09:25 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:09:35 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:09:45 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:09:55 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:10:05 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:10:15 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:10:25 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:10:35 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:10:40 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 04:10:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-19 04:10:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-19 04:10:44 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17.0.8.1 on kamateraubuntu with PID 456858 (/root/demo/build/classes/java/main started by root in /root/demo)
+2023-09-19 04:10:44 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-19 04:10:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-19 04:10:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-09-19 04:10:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-09-19 04:10:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:10:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-19 04:10:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-19 04:10:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-19 04:10:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1087 ms
+2023-09-19 04:10:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-19 04:10:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-19 04:10:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-19 04:10:46 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-19 04:10:46 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-19 04:10:46 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-09-19 04:10:46 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-19 04:10:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 04:10:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-19 04:10:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:10:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-19 04:10:47 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.121 seconds (JVM running for 3.585)
+2023-09-19 04:10:47 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:10:47 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=3e1e5abc-c259-47c6-ae19-e7fc2c0292f6, data={}, timestamp=2023-09-19T11:10:47.436243111Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Tue, 19 Sep 2023 11:10:47 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 04:10:57 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:10:57 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=c3d7582e-96ae-453f-88f5-16fbdb771daa, data={}, timestamp=2023-09-19T11:10:57.244987848Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Tue, 19 Sep 2023 11:10:57 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 04:11:07 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:11:07 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=483e47e6-015f-451e-9266-83ec299c0895, data={}, timestamp=2023-09-19T11:11:07.242710717Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Tue, 19 Sep 2023 11:11:07 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 04:11:17 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 04:11:17 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=7225fdce-58e0-4766-b9c5-25af16cc41a3, data={}, timestamp=2023-09-19T11:11:17.240122105Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Tue, 19 Sep 2023 11:11:17 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 04:11:19 [SpringApplicationShutdownHook] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
+2023-09-19 04:11:19 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 04:11:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-19 04:11:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-19 17:07:11 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17.0.8.1 on kamateraubuntu with PID 589354 (/root/demo/build/classes/java/main started by root in /root/demo)
+2023-09-19 17:07:11 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-19 17:07:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-19 17:07:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2023-09-19 17:07:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-09-19 17:07:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-09-19 17:07:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-19 17:07:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-19 17:07:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-19 17:07:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1256 ms
+2023-09-19 17:07:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-19 17:07:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-19 17:07:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-19 17:07:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-19 17:07:13 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-19 17:07:13 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-09-19 17:07:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-19 17:07:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 17:07:14 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-19 17:07:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-09-19 17:07:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-19 17:07:14 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.246 seconds (JVM running for 3.719)
+2023-09-19 17:07:14 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:07:14 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=04159816-b210-48a3-a5a6-09ebee6f8f4c, data={}, timestamp=2023-09-20T00:07:14.772858296Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:07:14 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:07:24 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:07:24 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=179d7a6b-2b8a-4880-9943-46bdaf1ccef2, data={}, timestamp=2023-09-20T00:07:24.597832261Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:07:24 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:07:34 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:07:34 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=a49ed4eb-8bcb-416c-a8c3-5d77e91e2c18, data={}, timestamp=2023-09-20T00:07:34.594418191Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:07:34 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:07:44 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:07:44 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=d9e4bea3-5bcc-47af-af85-74194d4f1da1, data={}, timestamp=2023-09-20T00:07:44.594459387Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:07:44 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:07:54 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:07:54 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=e7e87464-25af-4805-a81c-5a5ed5f854cf, data={}, timestamp=2023-09-20T00:07:54.599132151Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:07:54 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:08:04 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:08:04 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=20262747-a8e9-4110-8bff-4c039c847fac, data={}, timestamp=2023-09-20T00:08:04.598710846Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:08:04 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:08:14 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:08:14 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=1f92f6da-7b02-4191-a287-cbd21f5042f3, data={}, timestamp=2023-09-20T00:08:14.597258718Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:08:14 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:08:24 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:08:24 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=6c6f73d2-1683-4490-9edd-f4b46ab6d677, data={}, timestamp=2023-09-20T00:08:24.597620620Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:08:24 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:08:34 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:08:34 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=6dc853c0-e2b4-4eff-a5aa-9a6b897dfc56, data={}, timestamp=2023-09-20T00:08:34.598334723Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:08:34 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:08:44 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:08:44 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=f1004280-9258-4f50-a994-3a8bd6885240, data={}, timestamp=2023-09-20T00:08:44.595942247Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:08:44 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:08:54 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:08:54 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=b375b3e3-d400-4d11-b16b-130e241bf21f, data={}, timestamp=2023-09-20T00:08:54.597445901Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:08:54 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:09:04 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:09:04 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=ae4e10d3-9cb2-42e6-a441-ea3471e7775e, data={}, timestamp=2023-09-20T00:09:04.593797643Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:09:04 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:09:14 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:09:14 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=bb877d79-2cba-495d-bf34-e1206c7eb179, data={}, timestamp=2023-09-20T00:09:14.594298868Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:09:14 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:09:24 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:09:24 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=8565e135-7d9d-4841-89fd-4b837016699e, data={}, timestamp=2023-09-20T00:09:24.596662073Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:09:24 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:09:34 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:09:34 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=6ec35729-d54d-4f61-abf2-33498ecde050, data={}, timestamp=2023-09-20T00:09:34.598010075Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:09:34 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:09:39 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-19 17:09:39 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-19 17:09:39 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-09-19 17:09:44 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:09:44 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=6acf17a4-f8d0-4537-82e9-aad59c0c18c1, data={}, timestamp=2023-09-20T00:09:44.598214890Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:09:44 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:09:54 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:09:54 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=6128638c-c33c-4b22-8f44-fa8bdfcadf91, data={}, timestamp=2023-09-20T00:09:54.599126763Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:09:54 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:10:04 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:10:04 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=57c07bd1-a648-4aec-a2a9-7bf8111b9938, data={}, timestamp=2023-09-20T00:10:04.598369593Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:10:04 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:10:14 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:10:14 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=f7d4cd60-192d-46f2-a022-1f1a956b434a, data={}, timestamp=2023-09-20T00:10:14.594376485Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:10:14 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:10:24 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:10:24 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=73440270-28bf-4981-8eb5-0b73599ae11a, data={}, timestamp=2023-09-20T00:10:24.597503711Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:10:24 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:10:34 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:10:34 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=c1c56730-c47e-456e-9269-447fe16f7303, data={}, timestamp=2023-09-20T00:10:34.595195827Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:10:34 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:10:44 [scheduling-1] INFO  com.example.demo.service.ApiService - API call brandInfo: BrandInfo{brandEntName='BrandName1', brandCode='B001', industry='Tech', contacts='John Doe', telephone='123-456-7890', contactsPost='Manager'}
+2023-09-19 17:10:44 [scheduling-1] INFO  com.example.demo.service.ApiService - API returns: <200,{code=0000, message=result.success, localizedMessage=result.success, traceId=d3380240-246f-4b33-a6b5-1613dea01b27, data={}, timestamp=2023-09-20T00:10:44.596606265Z},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Wed, 20 Sep 2023 00:10:44 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-09-19 17:10:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 17:10:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-19 17:10:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
